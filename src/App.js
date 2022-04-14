@@ -1,12 +1,16 @@
 import "./styles.css";
 import Inputbox from "./component/Inputbox";
+import { Routes, Route } from "react-router-dom";
+import { Navbar } from "./component/Navbar";
 
 export default function App() {
   return (
     <div className="App">
-      <Inputbox />
-      <h1>Hello vikas</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Navbar />
+
+      <Routes>
+        <Route path={"/count"} element={<Inputbox />} />
+      </Routes>
     </div>
   );
 }

@@ -31,6 +31,8 @@ const Inputbox = () => {
 
   const { res, count, count2 } = state;
 
+  const disabled = count === "" || count2 === "";
+
   return (
     <div>
       <input
@@ -50,6 +52,7 @@ const Inputbox = () => {
       <input type="text" value={res} />
       <br />
       <button
+        disabled={disabled}
         onClick={() => {
           dispatch({ type: "ADD" });
         }}
@@ -57,6 +60,7 @@ const Inputbox = () => {
         ADD
       </button>
       <button
+        disabled={disabled}
         onClick={() => {
           dispatch({ type: "SUB" });
         }}
@@ -64,6 +68,7 @@ const Inputbox = () => {
         SUB
       </button>
       <button
+        disabled={disabled}
         onClick={() => {
           dispatch({ type: "MULTI" });
         }}
@@ -72,6 +77,7 @@ const Inputbox = () => {
         MULTI
       </button>
       <button
+        disabled={disabled}
         onClick={() => {
           dispatch({ type: "DIV" });
         }}
