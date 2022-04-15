@@ -36,14 +36,14 @@ const Inputbox = () => {
   return (
     <div>
       <input
-        type="text"
+        type="number"
         onChange={(e) => {
           dispatch({ type: "COUNT_ONE", payload: e.target.value });
         }}
       />{" "}
       <br />
       <input
-        type="text"
+        type="number"
         onChange={(e) => {
           dispatch({ type: "COUNT_TWO", payload: e.target.value });
         }}

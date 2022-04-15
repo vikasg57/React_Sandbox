@@ -3,6 +3,8 @@ import Inputbox from "./component/Inputbox";
 import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./component/Navbar";
 
+import { Todo } from "./component/Todo";
+
 export default function App() {
   return (
     <div className="App">
@@ -10,6 +12,7 @@ export default function App() {
 
       <Routes>
         <Route path={"/count"} element={<Inputbox />} />
+        <Route path={"/todo"} element={<Todo />} />
       </Routes>
     </div>
   );
